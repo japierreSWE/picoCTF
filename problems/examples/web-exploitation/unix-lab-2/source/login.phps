@@ -1,0 +1,15 @@
+<?php
+  include "config.php";
+
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+  $usrEnv = $_SERVER["USERNAME"];
+  $pswEnv = $_SERVER["PASSWORD"];
+
+  if ($usrEnv == $username && $pswEnv == $password) {
+    echo "<h1>Logged in!</h1>";
+    echo "<p>Your flag is: $FLAG</p>";
+  } else {
+    echo "<h1>Login failed.</h1>";
+  }
+?>
