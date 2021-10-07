@@ -1,0 +1,19 @@
+#!
+RADIUM=''
+PLUTO=''
+URANIUM=''
+while getopts "r:p:u:" flag;
+do
+	case "${flag}" in
+		r) RADIUM=${OPTARG};;
+		p) PLUTO=${OPTARG};;
+		u) URANIUM=${OPTARG};;
+	esac
+done
+
+echo "Grams of radium used in this experiment: $RADIUM";
+echo "Grams of plutonium used in this experiment: $PLUTO";
+echo "Grams of uranium used in this experiment: $URANIUM";
+echo "Conducting experiment...";
+echo "Experiment finished successfully.";
+
