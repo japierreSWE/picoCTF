@@ -1,0 +1,13 @@
+{
+    "name": "Unix Lab Challenges",
+    "author": "Jessica Forrett, Jean-Phillippe Pierre",
+    "description": "Dependency weightmaps for challenges involving Unix Injection",
+    "dependencies": {
+        "unix-lab-2-a40e8a2": {
+          "threshold": 1,
+          "weightmap": {
+            "unix-lab-e36ec8e": 1
+          }
+        }
+      }
+}
