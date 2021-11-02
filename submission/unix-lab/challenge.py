@@ -1,7 +1,10 @@
-from hacksport.problem import files_from_directory, PHPApp, ProtectedFile
+from hacksport.docker import DockerChallenge, Custom
 
+class Problem(DockerChallenge):
 
-class Problem(PHPApp):
-    files = files_from_directory("source/")
-    php_root = "source/"
-    num_workers = 5
+    def setup(self):
+        self.ports = {
+                80: Custom("http://{host}:{{port}}", "Website")
+                }
+
+        self.initialize_docker({})
